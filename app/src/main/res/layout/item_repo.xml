@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_large"
+    android:paddingTop="@dimen/padding_large">
+
+    <ImageView
+        android:id="@+id/iv_author"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/tv_author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        app:layout_constraintStart_toEndOf="@id/iv_author"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Author Name" />
+
+    <TextView
+        android:id="@+id/tv_repo_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_tiny"
+        android:layout_marginEnd="@dimen/padding_large"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_author_name"
+        tools:text="RepoName" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_tiny"
+        android:layout_marginEnd="@dimen/padding_large"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.rokoblak.trendinggit.ui.view.CircleView
+        android:id="@+id/circle"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_lang"
+        app:layout_constraintStart_toStartOf="@id/tv_desc"
+        app:layout_constraintTop_toTopOf="@id/tv_lang" />
+
+    <TextView
+        android:id="@+id/tv_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_medium"
+        app:layout_constraintStart_toEndOf="@id/circle"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        tools:text="Python" />
+
+    <ImageView
+        android:id="@+id/iv_star"
+        android:layout_width="12dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@id/tv_stars"
+        app:layout_constraintStart_toEndOf="@id/tv_lang"
+        app:layout_constraintTop_toTopOf="@id/tv_stars" />
+
+    <TextView
+        android:id="@+id/tv_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_small"
+        app:layout_constraintStart_toEndOf="@id/iv_star"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        tools:text="115" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bottom_barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/padding_small"
+        app:constraint_referenced_ids="tv_desc,tv_stars,tv_lang"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_on_background_disabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
