@@ -17,4 +17,8 @@
         <item name="colorContainer">@color/dark_gray</item>
 
     </style>
+
+
+    <style name="Theme.TrendingGit.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
 </resources>
