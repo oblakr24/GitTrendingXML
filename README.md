@@ -25,10 +25,8 @@ The app will load pages automatically once the user scrolls far enough (close en
 
 **This app is made using:**
 
-- Jetpack Compose for UI with Material 3
-- A mix of MVVM/MVI using Molecule for reactive state construction with Coroutines/Flows
-- Room and Datastore for data and preferences persistence and offline support
-- Standardized design and typography to match Material 3 and easy customization
+- A mix of MVVM/MVI for reactive state construction with Coroutines/Flows
+- Room for data and preferences persistence and offline support
 
 **Stack:**
 - MVVM architecture (mix of MVVM and MVI)
