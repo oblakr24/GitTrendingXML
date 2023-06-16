@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/padding_large">
 
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation"
         android:layout_width="240dp"
