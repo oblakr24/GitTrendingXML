@@ -2,13 +2,16 @@
 
 A demo app displaying the trending git repositories, sorted by the number of stars descending.
 
-Used for comparison versus the [Compose implementation](https://github.com/oblakr24/GitTrendingCompose).
+**Made for the comparison study versus the** [Jetpack Compose implementation](https://github.com/oblakr24/GitTrendingCompose).
 
 The app will load pages automatically once the user scrolls far enough (close enough to the last item) and supports offline mode and a togglable dark mode setting.
 
 ## Screenshots
 
-TODO
+<p align="center">
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/32245831/246509676-98a682c2-5598-45ac-a712-19819afa7c57.png" width="270" height="570">
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/32245831/246509697-038f5ad4-3d8a-444d-a702-8d6bd2f6283b.png" width="270" height="570">
+</p>
 
 ## Features
 
